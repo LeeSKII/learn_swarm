@@ -30,7 +30,8 @@ english_agent.functions.append(transfer_to_mandarin_agent)
 
 
 # messages = [{'role':'user','content': "Hola. ¿Como estás?"}]
-messages = [{'role':'user','content': "你好，你是谁?"}]
+messages = [{'role':'user','content': "你好，请帮我写一首三行诗"}]
+# messages = [{'role':'user','content': "你好，我想学西班牙语。"}]
 
 responses = client.run(agent=english_agent,messages=messages)
 

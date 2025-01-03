@@ -6,6 +6,7 @@ import os
 load_dotenv()
 
 api_key = os.getenv("DEEPSEEK_API_KEY")
+print(api_key)
 
 open_client = OpenAI(
     api_key=api_key,
