@@ -20,7 +20,7 @@ def print_account_details(context_variables:dict):
     user_id = context_variables.get('user_id')
     name = context_variables.get('name')
     print(f'Account details:{name},{user_id}')
-    return 'Success'
+    return 'Success getting account details,stopping.'
 
 # Define agent
 agent = Agent(name='agent',instructions=instructions,model='deepseek-chat',functions=[print_account_details])
