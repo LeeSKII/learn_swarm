@@ -15,13 +15,13 @@ gpt_api_key = os.getenv('GPT_API_KEY')
 deepseek_url = 'https://api.deepseek.com'
 gpt_url = 'https://api.gptapi.us/v1'
 
-openai_client = OpenAI(api_key=gpt_api_key,base_url=gpt_url)
+openai_client = OpenAI(api_key=api_key,base_url=deepseek_url)
 
 deepseek_model_name = 'deepseek-chat'
 gpt_model_name = 'gpt-4o'
 anthropic_model_name= 'claude-3-5-sonnet-20241022'
 
-agent = Agent(name='agent',instructions='You are a helpful agent.',functions=[get_weather],model=gpt_model_name)
+agent = Agent(name='agent',instructions='You are a helpful agent.',functions=[get_weather],model=deepseek_model_name)
 
 client = Swarm(client=openai_client)
 

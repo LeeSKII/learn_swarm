@@ -25,3 +25,5 @@ Swarm框架学习记录
 ### Function calling
 
 实际使用下来`deepseek`的模型会进入到无限循环中，模型无法从`function calling`的结果跳出来，会一直输出需要执行`function`，但是`openai`的模型可以正确执行，另测试`anthropic`的`claude-3-5-sonnet-20241022`，模型并不会进入到工具调用，这里可能是`tool`调用的不兼容问题。
+
+2025年1月9日，测试发现在`python`的`openai>1.58.1`版本下`function calling`不兼容，`deepseek`的模型`deepseek-chat`会重复输出`function`调用的提示信息，`openai`的`gpt-4o`模型可以正常执行。
